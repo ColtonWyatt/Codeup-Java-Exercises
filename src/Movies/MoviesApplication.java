@@ -35,7 +35,7 @@ public class MoviesApplication {
         switch (choice){
             case 1:
                 for(Movie pMovie : movieList){
-                    System.out.println(pMovie.getName() + " -- " + pMovie.getCategory);
+                    System.out.println(pMovie.getName() + " -- " + pMovie.getCategory());
                 }
                 break;
             case 2:
@@ -73,7 +73,7 @@ public class MoviesApplication {
                 System.out.println("Enter category");
                 String category = in.getString();
                 Movie nMovie = new Movie(name, category);
-                movieList = addMovie(movieList, nMovie);
+//                movieList = addMovie(movieList, nMovie);
 
         }
     }

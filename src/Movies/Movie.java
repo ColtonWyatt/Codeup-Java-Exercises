@@ -18,6 +18,11 @@ public class Movie {
         this.name = name;
     }
 
-    public String
+    public String getName() {
+        return name;
+    }
 
+    public String getCategory() {
+        return category;
+    }
 }
