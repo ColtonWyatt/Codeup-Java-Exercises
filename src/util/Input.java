@@ -21,11 +21,25 @@ public class Input {
     }
 
     public int getInt(){
-        return this.scanner.nextInt();
+        System.out.println("Please enter an integer value");
+        String stringVal = getString();
+        try{
+            return Integer.valueOf(stringVal);
+        }catch (NumberFormatException e){
+            System.out.println("Invalid integer");
+            return getInt();
+        }
     }
 
     public double getDouble(){
-        return this.scanner.nextDouble();
+        System.out.println("Please enter a double");
+        String stringVal = getString();
+        try {
+            return Double.valueOf(stringVal);
+        }catch (NumberFormatException e){
+            System.out.println("This was not a double");
+            return getDouble();
+        }
     }
 
     public int getInt(int min, int max){
@@ -57,5 +71,7 @@ public class Input {
 //        System.out.println(inputOne.getInt(1, 10));
 //        System.out.println("Give me a number between 1.0 and 10.0: ");
 //        System.out.println(inputOne.getDouble(1.0, 10.0));
+        System.out.println(inputOne.getDouble());
+
     }
 }
